@@ -1,3 +1,38 @@
+@keyframes superanimation{
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(150px);
+    }
+    50% {
+        transform: translateY(100px) rotate(360deg);
+    }
+    90% {
+        transform: translateY(-100px);
+    }
+    75% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+
+}
+
+@-webkit-keyframes superanimation{
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(150px);
+    }
+    100% {
+        transform: translateY(100px) rotate(360deg);
+    }
+}
+
+
 *{
     margin: none;
     padding: none;
@@ -43,5 +78,17 @@
     height: 200px;
     transform: translateX(100px);
 }
-
 /*matrix(1, 2, 3, 4, 5, 6);*/
+
+#animation{
+    margin: 100px;
+    width: 400px;
+    height: 200px;
+    background-color: blue;
+    color: white;
+}
+
+#animation:hover{
+    animation: superanimation 3s steps(4);
+}
+
