@@ -92,3 +92,42 @@
     animation: superanimation 3s steps(4);
 }
 
+
+#devant-derriere{
+    position: absolute;
+    top: 1000px;
+    left: 0px;
+    transition: 2s;
+    margin: 50px;
+    width: 594px;
+    height: 420px;
+}
+
+#photo3d{
+    margin: 50px;
+    width: 594px;
+    height: 420px;
+    z-index: 100;
+}
+
+/*
+#photo3d:hover{
+    transform: translate3d(100px, 50px, 5000px) scale3d( 1, 0.5, 0.5);
+    backface-visibility: hidden;
+}
+*/
+
+
+#message-hidden{
+    background-image: linear-gradient(white, green);
+    transform: rotateY(-180deg);
+    z-index: 50;
+}
+
+#photo3d:hover{
+    transform: rotateY(360deg);
+}
+
+#photo3d:hover + #message-hidden{
+    transform: rotateY(180deg);
+}
